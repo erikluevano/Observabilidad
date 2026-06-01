@@ -1,0 +1,5 @@
+[user]
+	name = Erik
+	email = luevanomartinezerikraul@gmail.com
+[core]
+	excludesfile = /home/admin/.gitignore

@@ -1,0 +1,106 @@
+groups:
+  - name: host-alerts
+    rules:
+      # A1: CPU alta (> 80%)
+      - alert: HostHighCpuUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Uso alto de CPU (ID: A1)"
+          description: "El nodo host {{ $labels.instance }} reporta un uso de CPU superior al 80% durante más de 5 minutos."
+
+      # A2: Memoria alta (> 85%)
+      - alert: HostHighMemoryUsage
+        expr: 100 * (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Uso alto de memoria RAM (ID: A2)"
+          description: "El nodo host {{ $labels.instance }} supera el 85% de uso de memoria disponible."
+
+      # A3: Disco crítico (> 90%)
+      - alert: HostDiskCritical
+        expr: 100 * (1 - (node_filesystem_avail_bytes{fstype!~"tmpfs|overlay"} / node_filesystem_size_bytes{fstype!~"tmpfs|overlay"})) > 90
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Espacio en disco crítico (ID: A3)"
+          description: "El punto de montaje {{ $labels.mountpoint }} en el host supera el 90% de uso."
+
+  - name: container-alerts
+    rules:
+      # A4: Contenedor esperado caído (Evaluación global usando cAdvisor)
+      - alert: ContainerDown
+        expr: change_percentage_of_something_if_needed or (time() - last_over_time(container_last_seen{name!=""}[15m]) > 60)
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Contenedor no disponible (ID: A4)"
+          description: "El contenedor '{{ $labels.name }}' ha dejado de reportar señales a cAdvisor durante más de 1 minuto."
+
+      # A10: Opcional - Reinicios frecuentes
+      - alert: ContainerFrequentRestarts
+        expr: rate(container_start_time_seconds{name!=""}[10m]) > 0.005
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Contenedor reiniciándose frecuentemente (ID: A10)"
+          description: "El contenedor '{{ $labels.name }}' está experimentando reinicios constantes en los últimos 10 minutos."
+
+  - name: service-alerts
+    rules:
+      # A5: MariaDB caída (Monitoreada a través de mariadb_exporter)
+      - alert: MariaDBDown
+        expr: mysql_up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Base de datos MariaDB caída (ID: A5)"
+          description: "El exportador 'mariadb_exporter' reporta que la instancia 'cargas_academicas-db' no responde."
+
+      # A6: Django / Cargas Académicas sin responder (Mapeado a seguimiento_programasdeploy-app)
+      - alert: DjangoDown
+        expr: up{job="django"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Aplicación Cargas Académicas sin responder (ID: A6)"
+          description: "El endpoint de scraping de la aplicación 'cargas-academicas' está caído o inaccesible."
+
+      # A7: Tomcat / Java sin responder (Mapeado a controlescolar_java-app-1 en su puerto de métricas 9404)
+      - alert: TomcatDown
+        expr: up{job="tomcat"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Servidor Tomcat / JMX sin responder (ID: A7)"
+          description: "El entorno Java de control escolar no responde a las solicitudes de recolección."
+
+      # A8: WordPress sin responder (Usa tu blackbox-exporter apuntando al contenedor apache puerto 80)
+      - alert: WordPressDown
+        expr: probe_success{job="wordpress-http"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Sitio WordPress caído (ID: A8)"
+          description: "Blackbox Exporter reporta que el sitio WordPress ha devuelto un código HTTP inválido (distinto de 2xx)."
+
+      # A9: Opcional - Latencia alta en WordPress (> 1 segundo)
+      - alert: HighLatency
+        expr: probe_duration_seconds{job="wordpress-http"} > 1
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latencia alta en WordPress (ID: A9)"
+          description: "El tiempo de respuesta HTTP de WordPress supera 1 segundo de manera sostenida."
