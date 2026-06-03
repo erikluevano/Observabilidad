@@ -1,36 +1,22 @@
 global:
-  # Configuración global del servidor de correo de salida (SMTP)
-  # Ejemplo usando Gmail. Si usas otro proveedor, cambia el smarthost.
   smtp_smarthost: 'smtp.gmail.com:587'
   smtp_from: 'alertador9@gmail.com'
   smtp_auth_username: 'alertador9@gmail.com'
-  # RECUERDA: Si usas Gmail, este campo debe ser una "Contraseña de aplicación" de 16 caracteres, no tu clave personal.
   smtp_auth_password: 'jagngrpphpvesfvt'
   smtp_require_tls: true
 
 # Enrutamiento de alertas
 route:
-  # Agrupa alertas que compartan el mismo nombre y afecten al mismo contenedor/instancia
   group_by: ['alertname', 'instance', 'name']
-  
-  # Cuánto tiempo esperar inicialmente antes de enviar la primera notificación de un grupo
   group_wait: 30s
-  
-  # Cuánto tiempo esperar antes de enviar notificaciones sobre nuevas alertas añadidas a un grupo existente
   group_interval: 5m
-  
-  # Si una alerta sigue activa (Firing), se volverá a enviar un correo recordatorio cada 4 horas
   repeat_interval: 4h
-  
-  # Receptor final predeterminado
   receiver: 'email-admin-sys'
 
 receivers:
   - name: 'email-admin-sys'
     email_configs:
       - to: 'ryrt32@gmail.com'
-        # Envía un correo de confirmación cuando el estado cambie a "Resolved" (ej. cuando la CPU baje o el contenedor suba)
-        send_resolved: true
-        # Formato del asunto del correo electrónico
+        send_resolved: false
         headers:
           subject: '============== [{{ .Status | toUpper }}] Alerta de Infraestructura: {{ .CommonLabels.alertname }} =============='

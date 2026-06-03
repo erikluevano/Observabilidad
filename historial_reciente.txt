@@ -1,0 +1,880 @@
+    1  ls
+    2  docker ps
+    3  ls
+    4  mkdir wordpress
+    5  cd wordpress/
+    6  ls
+    7  nano docker-compose.yml
+    8  nano .env
+    9  ls
+   10  docker compose up -d 
+   11  nano docker-compose.yml
+   12  docker compose ps
+   13  cat docker-compose.yml 
+   14  nano docker-compose.yml
+   15  cd ..
+   16  ls
+   17  cd seguimiento_programasdeploy/
+   18  ls
+   19  cd ..
+   20  ls
+   21  cd wordpress/
+   22  ls
+   23  cat docker-compose.yml 
+   24  cd ..
+   25  ls
+   26  cat docker-compose.yml 
+   27  ls
+   28  rm docker-compose.yml 
+   29  nano docker-compose.yml
+   30  ls
+   31  cd wordpress/
+   32  ls
+   33  docker compose restart
+   34  docker compose down -d
+   35  docker compose down -v
+   36  docker compose up -d 
+   37  ls
+   38  docker compose down -v
+   39  docker compose up -d --build
+   40  ls
+   41  cd ..
+   42  ls
+   43  apt install tree
+   44  sudo apt install tree
+   45  tree
+   46  ls
+   47  cd seguimiento_programasdeploy/
+   48  ls
+   49  cd ..
+   50  mkdir observabilidad-devops
+   51  cd observabilidad-devops/
+   52  nano docker-compose.yml
+   53  cd ..
+   54  mkdir prometheus
+   55  cd prometheus
+   56  nano prometheus.yml
+   57  ls
+   58  cd ,,
+   59  cd ..
+   60  ls
+   61  cd observabilidad-devops/
+   62  ls
+   63  cat docker-compose.yml 
+   64  cd ..
+   65  ls
+   66  cd prometheus/
+   67  ls
+   68  cd .
+   69  cd ..
+   70  cd wordpress/
+   71  ls
+   72  cat docker-compose.yml 
+   73  cat .env
+   74  ls
+   75  cd ..
+   76  ls
+   77  cd npm/
+   78  ls
+   79  cat docker-compose.yml 
+   80  ls
+   81  cd ..
+   82  ls
+   83  cd wordpress/
+   84  ls
+   85  cat docker-compose.yml 
+   86  docker ps
+   87  docker exec -it wordpress-wordpress-1 bash
+   88  ls
+   89  docker exec -it wordpress-wordpress-1 bash
+   90  docker compose reset
+   91  docker compose restart
+   92  cd ..
+   93  ls
+   94  cd prometheus/
+   95  ls
+   96  cat prometheus.yml 
+   97  docker compose ps
+   98  ls
+   99  rm prometheus.yml 
+  100  cd 
+  101  lñs
+  102  ls
+  103  rm -r prometheus/
+  104  ls
+  105  cd observabilidad-devops/
+  106  mkdir prometheus/
+  107  ls
+  108  cd prometheus/
+  109  ls
+  110  cat prometheus.yml/
+  111  cd prometheus.yml/
+  112  ls
+  113  cd .
+  114  ls
+  115  cd ..
+  116  ls
+  117  cd rules/
+  118  ls
+  119  cd 
+  120  cd ..
+  121  cd ho
+  122  ls
+  123  cd admin/
+  124  ls
+  125  cd observabilidad-devops/
+  126  ls
+  127  cd prometheus/
+  128  ls
+  129  rm -r prometheus.yml/
+  130  ls
+  131  cd 
+  132  ls
+  133  cd observabilidad-devops/
+  134  ls
+  135  cd prometheus/
+  136  ls
+  137  rm -r prometheus.yml/
+  138  ls
+  139  rm -r prometheus.yml/
+  140  cat prometheus.yml/
+  141  rm -r -f prometheus.yml/
+  142  ls
+  143  cd ..
+  144  ls
+  145  pr
+  146  cd prometheus/
+  147  ls
+  148  sudo rm -r -f rules
+  149  ls
+  150  nano prometheus.yml
+  151  sudo nano prometheus.yml
+  152  ls
+  153  cat prometheus.yml 
+  154  ls
+  155  nano prometheus.yml 
+  156  rm prometheus.yml 
+  157  ls -la
+  158  exit
+  159  cd controlescolar_java/
+  160  ls
+  161  docker compose exec -T db mysql -u usercontrolescolar -pusercontrolescolar123 controlescolar < ./controlescolar.sql
+  162  docker cp controlescolar.sql controlescolar_java-db-1:/tmp/controlescolar.sql
+  163  docker exec -it controlescolar_java-db-1 mysql -u usercontrolescolar -pusercontrolescolar123 controlescolar
+  164  docker compose restart app
+  165  cd ..
+  166  docker ps
+  167  ls
+  168  cd prometheus/
+  169  ls
+  170  cd ..
+  171  cd observabilidad-devops/
+  172  ls
+  173  cat docker-compose.yml 
+  174  nano ~/controlescolar_java/tomcat-jmx.yaml{
+  175  nano ~/controlescolar_java/tomcat-jmx.yaml
+  176  nano ~/controlescolar_java/Dockerfile
+  177  nano ~/controlescolar_java/docker-compose.yml
+  178  docker compose up -d --build
+  179  docker compose down
+  180  cd ..
+  181  cd wordpress/
+  182  cd ..
+  183  cd controlescolar_java/
+  184  docker compose up -d --build
+  185  curl http://localhost:9404/metrics
+  186  cd ..
+  187  ls
+  188  cd prometheus/
+  189  ls
+  190  nano prometheus.yml 
+  191  cd pr
+  192  cd ..
+  193  cd observabilidad-devops/
+  194  nano docker-compose.yml 
+  195  docker compose up -d
+  196  docker compose down
+  197  docker compose up -d
+  198  cd docker compose down
+  199  docker compose down
+  200  cd ..
+  201  ls
+  202  cd observabilidad-devops/
+  203  ls
+  204  cd prometheus/
+  205  ls
+  206  nano prometheus.yml/
+  207  ls -la prometheus.yml/
+  208  ls -la
+  209  rm prometheus.yml/
+  210  rm -rf prometheus.yml/
+  211  sudo rm -rf prometheus.yml/
+  212  ls
+  213  cd rules/
+  214  ls
+  215  cd ..
+  216  ls
+  217  cd ..
+  218  ls
+  219  ls prometheus/
+  220  cat prometheus/prometheus.yml 
+  221  nano prometheus/prometheus.yml 
+  222  ls
+  223  sudo su nano prometheus/prometheus.yml 
+  224  sudo nano prometheus/prometheus.yml 
+  225  cd prometheus/
+  226  ls
+  227  ls  -la
+  228  cd ..
+  229  ls  -la
+  230  cat prometheus/prometheus.yml 
+  231  sudo rm -rf prometheus/
+  232  ls
+  233  mkdir prometheus
+  234  cd prometheus/
+  235  nano prometheus.yml
+  236  cat prome
+  237  ls
+  238  nano prometheus.yml
+  239  ls ..
+  240  ls
+  241  cd observabilidad-devops/
+  242  ls
+  243  ls  -la
+  244  cd ..
+  245  ls
+  246  ls -la
+  247  cd wordpress/
+  248  ls
+  249  cd ..
+  250  ls
+  251  observabilidad-devops/
+  252  cd observabilidad-devops/
+  253  ls
+  254  cd alertmanager/
+  255  ls
+  256  cd alertmanager.yml/
+  257  ls
+  258  cd ..
+  259  ls
+  260  cd ..
+  261  ls
+  262  sudo rm -r -f prometheus/
+  263  sudo rm -r -f alertmanager/
+  264  ls
+  265  mkdir prometheus
+  266  cd prometheus/
+  267  ls
+  268  cd ..
+  269  ls
+  270  cat docker-compose.yml 
+  271  ls
+  272  docker compose ps
+  273  docker compose down
+  274  mkdir -p prometheus/rules
+  275  mkdir -p alertmanager
+  276  lls
+  277  ls
+  278  touch prometheus/prometheus.yml
+  279  touch alertmanager/alertmanager.yml
+  280  cd prometheus/
+  281  ls
+  282  nano prometheus.yml 
+  283  cd ..
+  284  ls
+  285  cd prometheus/
+  286  ls
+  287  nano prometheus.yml 
+  288  cd ..
+  289  ls
+  290  docker compose up -d 
+  291  ls
+  292  docker compose ps
+  293  cat docker-compose.yml 
+  294  docker compose ps
+  295  tree
+  296  docker compose down
+  297  ls
+  298  cd prometheus/
+  299  ls
+  300  rm prometheus.yml 
+  301  nano prometheus.yml 
+  302  cd ..
+  303  nano alertmanager/alertmanager.yml
+  304  nano docker-compose.yml 
+  305  ls
+  306  docker compose down
+  307  docker compose up -d
+  308  docker ps
+  309  docker compose ps
+  310  ls
+  311  cat docker-compose.yml 
+  312  ls
+  313  cd prometheus/
+  314  ls
+  315  nano prometheus.yml 
+  316  ls
+  317  nano prometheus.yml 
+  318  cd ..
+  319  ls
+  320  docker compose down
+  321  docker compose up -d
+  322  docker compose ps
+  323  ls
+  324  cd alertmanager/
+  325  ls
+  326  cat alertmanager.yml 
+  327  ls
+  328  cd ,,
+  329  docker ps
+  330  lsls
+  331  ls
+  332  cd ..
+  333  ls
+  334  cd prometheus/
+  335  ls
+  336  cd .
+  337  ls
+  338  cat do
+  339  cd ..
+  340  cat docker-compose.yml 
+  341  ls
+  342  cd prometheus/
+  343  cat prometheus.yml 
+  344  ls
+  345  cd ..
+  346  ls
+  347  cd ..
+  348  ls
+  349  cd wordpress/
+  350  docker compose down
+  351  docker compose down 
+  352  docker ps
+  353  docker compose up -d
+  354  docker compose down 
+  355  docker compose up -d
+  356  curl http://localhost:9404/metricscurl http://localhost:9404/metrics
+  357  cd observabilidad-devops/
+  358  ls
+  359  docker ps
+  360  ls
+  361  cat docker-compose.yml 
+  362  cat .env
+  363  ls
+  364  cat docker-compose.yml 
+  365  ls
+  366  cat docker-compose.yml 
+  367  cat prometheus/prometheus.yml 
+  368  curl -s http://3.138.188.60:9404/metrics | grep -E "^jvm_threads|^tomcat_|^http_server"
+  369  curl -s http://TU-IP:8000/django-metrics/metrics | grep -E "^django_http|^django_db|^process_cpu"
+  370  docker exec django-apache cat /app/myapp/settings.py | grep -A 15 "MIDDLEWARE"
+  371  docker ps
+  372  docker exec app cat /app/myapp/settings.py | grep -A 15 "MIDDLEWARE"
+  373  docker exec seguimiento_programadeploy-app cat /app/myapp/settings.py | grep -A 15 "MIDDLEWARE"
+  374  docker exec seguimiento_programasdeploy-app cat /app/myapp/settings.py | grep -A 15 "MIDDLEWARE"
+  375  docker exec cargas-academicas cat /app/myapp/settings.py | grep -A 15 "MIDDLEWARE"
+  376  docker exec cargas-academicas bash
+  377  ls
+  378  docker compose exec cargas-academicas bash
+  379  cd ..
+  380  ls
+  381  cd seguimiento_programasdeploy/
+  382  ñs
+  383  ls
+  384  docker ps
+  385  docker compose exec app bash
+  386  curl -s http://3.138.188.60:8000/django-metrics/metrics | grep -E "^django_http|^django_db|^process_cpu"
+  387  docker compose exec app cat /app/cargas_academicas/settings.py | grep -A 15 "MIDDLEWARE"
+  388  # Confirmar que el target está UP
+  389  curl -s http://localhost:9090/api/v1/query?query=up{job="tomcat"} | python3 -m json.tool | grep value
+  390  curl -s 'http://localhost:9090/api/v1/query?query=up{job="tomcat"}' | python3 -m json.tool | grep -A 2 "value"
+  391  docker ps
+  392  curl -s http://localhost:9090/api/v1/query?query=up | python3 -m json.tool
+  393  curl -s http://localhost:9404/metrics | head -n 15
+  394  curl -s 'http://localhost:9090/api/v1/query?query=up{job="tomcat"}' | python3 -m json.tool | grep -A 2 '"value"'
+  395  curl -s 'http://localhost:9090/api/v1/query?query=up{job="tomcat"}' | python3 -u -m json.tool | grep -A 2 '"value"'
+  396  curl -s 'http://localhost:9090/api/v1/query?query=up{job="tomcat"}' | awk -F'"' '/value/{getline; getline; print $2}'
+  397  docker stop tomcat
+  398  docker stop controlescolar_java-app-1
+  399  docker run --rm -it progrium/stress --cpu 2 --timeout 300s
+  400  docker compose up -d
+  401  docker info
+  402  cd ..
+  403  ls
+  404  mkdir java
+  405  cd java/
+  406  ls
+  407  ls controlescolar_java/
+  408  cd ..
+  409  mv ~/java/controlescolar_java ~/
+  410  ls
+  411  rm -rf java
+  412  ls
+  413  cat controlescolar_java/docker-compose.yml 
+  414  ls controlescolar_java/
+  415  cat controlescolar_java/Dockerfile 
+  416  cat controlescolar_java/docker-compose.yml 
+  417  mv ~/controlescolar_java/docker-compose.yml ~/
+  418  nano ~/docker-compose.yml
+  419  rm docker-compose.yml 
+  420  nano docker-compose.yml
+  421  docker compose up -d
+  422  docker ps
+  423  docker compose exec app ls /usr/local/tomcat/webapps/
+  424  docker compose exec javaapp ls /usr/local/tomcat/webapps/
+  425  docker compose exec java_app ls /usr/local/tomcat/webapps/
+  426  docker ps
+  427  cat docker-compose.yml 
+  428  docker compose exec java_app ls /usr/local/tomcat/webapps/
+  429  nano docker-compose.yml 
+  430  docker compose up -d --build
+  431  docker compose exec java_app ls /usr/local/tomcat/webapps/
+  432  nano controlescolar_java/Dockerfile 
+  433  docker compose up -d --build
+  434  docker compose exec java_app ls /usr/local/tomcat/webapps/
+  435  docker compose logs --tail=50 java_app
+  436  cd controlescolar_java/
+  437  ls
+  438  ls -la
+  439  cat README.md 
+  440  cd ..
+  441  ls
+  442  cat controlescolar_java/ConfigDB.xml 
+  443  cd controlescolar_java/
+  444  rm ConfigDB.xml 
+  445  nano ConfigDB.xml
+  446  cd ..
+  447  cat docker-compose.yml 
+  448  nano docker-compose.yml 
+  449  cat docker-compose.yml 
+  450  docker compose up -d
+  451  ls
+  452  ls -la controlescolar_java/
+  453  cat controlescolar_java/
+  454  cat ConfigDB.xml/
+  455  ls ConfigDB.xml/
+  456  rm -rf ConfigDB.xml/
+  457  ls
+  458  cd controlescolar_java/
+  459  docker compose up -d --build
+  460  docker compose up
+  461  docker compose up -d
+  462  nano Dockerfile 
+  463  docker compose up -d
+  464  docker compose up -d --build
+  465  cd ..
+  466  ls
+  467  cd controlescolar_java/
+  468  docker compose up -d
+  469  docker compose up -d --build
+  470  docker compose down
+  471  nano docker-compose.yml 
+  472  docker compose up -d --build
+  473  docker compose exec -T db mysql -u usercontrolescolar -pusercontrolescolar123 controlescolar < ./controlescolar.sql
+  474  docker compose restart app
+  475  docker compose down
+  476  sudo lsof -i :8080
+  477  docker ps
+  478  docker stop c08219801fe7
+  479  docker rm c08219801fe7
+  480  docker compose up -d --build
+  481  docker compose exec -T db mysql -u usercontrolescolar -pusercontrolescolar123 controlescolar < ./controlescolar.sql
+  482  docker compose restart app
+  483  docker compose exec db bash
+  484  docker ps
+  485  docker compose exec db bash
+  486  docker ps
+  487  ls
+  488  nano docker-compose.yml 
+  489  cd Do
+  490  nano Dockerfile 
+  491  docker compose up -d
+  492  docker compose up -d --build
+  493  nano docker-compose.yml 
+  494  docker compose up -d
+  495  docker compose down -v
+  496  nano docker-compose.yml 
+  497  docker compose up -d
+  498  docker ps
+  499  docker compose exec app bash
+  500  nano Dockerfile 
+  501  docker compose up -d --build
+  502  docker compose exec db bash
+  503  ls
+  504  cd
+  505  ls
+  506  cd observabilidad-devops/
+  507  ls
+  508  cd prometheus/
+  509  ls
+  510  cat prometheus.yml 
+  511  nano prometheus.yml 
+  512  curl -m 10 http://3.138.188.60:9404/metrics
+  513  curl -m 10 http://localhost:9404/metrics
+  514  mkdir npm
+  515  cd npm/
+  516  nano docker-compose.yml
+  517  docker compose up -d
+  518  sudo apt update
+  519  sudo apt upgrade -y
+  520  # Add Docker's official GPG key:
+  521  sudo apt update
+  522  sudo apt install ca-certificates curl
+  523  sudo install -m 0755 -d /etc/apt/keyrings
+  524  sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+  525  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  526  # Add the repository to Apt sources:
+  527  sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+  528  Types: deb
+  529  URIs: https://download.docker.com/linux/debian
+  530  Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+  531  Components: stable
+  532  Architectures: $(dpkg --print-architecture)
+  533  Signed-By: /etc/apt/keyrings/docker.asc
+  534  EOF
+  535  sudo apt update
+  536  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  537  sudo systemctl enable --now docker
+  538  sudo usermod -aG docker $USER
+  539  newgrp docker
+  540  history
+  541  ls
+  542  cd controlescolar_java/
+  543  ls
+  544  docker ps
+  545  docker compose up -d
+  546  docker compose down
+  547  docker compose up -d
+  548  ls
+  549  cd npm/
+  550  ls
+  551  docker ps
+  552  cd ..
+  553  cd django 
+  554  mkdir django
+  555  cd django/
+  556  ls
+  557  docker ps
+  558  git clone -b observabilidad https://gitlab.com/eduarsan822/seguimiento_programasdeploy.git
+  559  ls
+  560  cd seguimiento_programasdeploy/
+  561  cd ..
+  562  rm -rf django/
+  563  ls
+  564  git clone -b observabilidad https://gitlab.com/eduarsan822/seguimiento_programasdeploy.git
+  565  ls
+  566  cd seguimiento_programasdeploy/
+  567  ls
+  568  nano docker-compose.yml 
+  569  docker compose up -d 
+  570  docker ps
+  571  ls
+  572  cd frameworks2025/
+  573  ls
+  574  cd django/
+  575  ls
+  576  cd app/
+  577  ls
+  578  cd cargas_academicas/
+  579  ls
+  580  cd cargas_academicas/
+  581  ls
+  582  nano settings.py
+  583  cd 
+  584  ls
+  585  docker compose down -v
+  586  docker compose up -d --build
+  587  docker ps
+  588  docker compose exec 32de11851cc8 bash
+  589  docker compose app exec bash
+  590  ls
+  591  docker ps
+  592  docker compose exec app bash
+  593  ls
+  594  cd frameworks2025/
+  595  lsa
+  596  ls
+  597  cd dJA
+  598  cd django/
+  599  ls
+  600  cd app/
+  601  ls
+  602  cd cargas_academicas/
+  603  ls
+  604  cd cargas_academicas/
+  605  lks
+  606  nano settings.py
+  607  cd ..
+  608  cd 
+  609  cd seguimiento_programasdeploy/
+  610  ñs
+  611  ls
+  612  docker compose down
+  613  docker compose up -d 
+  614  cd frameworks2025/django/app/cargas_academicas/cargas_academicas/
+  615  nano settings.py
+  616  cat settings.py 
+  617  cd 
+  618  cd seguimiento_programasdeploy/
+  619  ls
+  620  clear
+  621  ls
+  622  docker compose down -v
+  623  docker compose up -d --build
+  624  docker compose exec app bash
+  625  ls
+  626  docker ps
+  627  cd 
+  628  ls
+  629  cd prometheus/
+  630  ls
+  631  nano prometheus.yml 
+  632  cat prometheus.yml 
+  633  cd 
+  634  cd observabilidad-devops/
+  635  ls
+  636  nano docker-compose.yml 
+  637  cd ..
+  638  ls
+  639  docker ps
+  640  cd seguimiento_programasdeploy/
+  641  ls
+  642  nano docker-compose.yml 
+  643  nano Dockerfile 
+  644  ls
+  645  cd frameworks2025/
+  646  ls
+  647  cd django/
+  648  ls
+  649  nano requirements.txt 
+  650  cd app/
+  651  ls
+  652  cd cargas_academicas/
+  653  ls
+  654  nano settings.py
+  655  cd ..
+  656  ls
+  657  cd cargas_academicas/
+  658  ls
+  659  cd cargas_academicas/
+  660  ls
+  661  nano settings.py
+  662  nano urls.py 
+  663  cd 
+  664  cd seguimiento_programasdeploy/
+  665  ls
+  666  docker compose down -v
+  667  docker compose up -d --build
+  668  docker compose exec app bash
+  669  curl http://localhost:8000/metrics
+  670  cd frameworks2025/
+  671  ls
+  672  cd django/app/cargas_academicas/cargas_academicas/
+  673  urlpatterns = [
+  674      path('admin/', admin.site.urls),
+  675      path('materias/', include('materias.urls')),
+  676      path('usuarios/', include('usuarios.urls')),
+  677      path('', home, name='home'),
+  678      path('api/', include('api.urls')),
+  679      path("django-metrics/", include("django_prometheus.urls")),
+  680  ]
+  681  nano urls.py 
+  682  curl http://localhost:8000/django-metrics/metrics
+  683  docker ps
+  684  cd .
+  685  cd 
+  686  cd seguimiento_programasdeploy/
+  687  cd ..
+  688  cd observabilidad-devops/
+  689  ls
+  690  cd alertmanager/
+  691  ls
+  692  cd ..
+  693  ls
+  694  cd ..
+  695  docker ps
+  696  ls
+  697  cd observabilidad-devops/
+  698  ls
+  699  cd prometheus/
+  700  ls
+  701  nano prometheus.yml 
+  702  docker compose up -d --build
+  703  cat prometheus.yml 
+  704  docker compose up -d --build
+  705  nano prometheus.yml 
+  706  docker compose down 
+  707  docker compose up -d --build
+  708  nano prometheus.yml 
+  709  docker ps
+  710  docker compose exec app bash
+  711  docker compose exec seguimiento_programasdeploy-app  bash
+  712  docker compose exec app  bash
+  713  docker compose exec seguimiento_programasdeploy-app   bash
+  714  ls
+  715  exit
+  716  ls
+  717  tree .
+  718  docker ps
+  719  ls
+  720  zip -r proyectoMonitoreo.zip controlescolar_java npm observabilidad-devops seguimiento_programasdeploy wordpress .[!.]* *
+  721  sudo apt install zip
+  722  zip -r proyectoMonitoreo.zip controlescolar_java npm observabilidad-devops seguimiento_programasdeploy wordpress .[!.]* *
+  723  ls
+  724  python -m http.server
+  725  sudo apt install python3
+  726  python3 -m http.server
+  727  python3 -m http.server 6666
+  728  hostname -I
+  729  python3 -m http.server 6666
+  730  exit
+  731  docker ps
+  732  ls
+  733  docker ps
+  734  ls controlescolar_java/
+  735  ls
+  736  ls npm/
+  737  ls observabilidad-devops/
+  738  ls seguimiento_programasdeploy/
+  739  ls wordpress/
+  740  cd observabilidad-devops/
+  741  ls
+  742  cat docker-compose.yml 
+  743  ls
+  744  cd alertmanager/
+  745  ls
+  746  cat alertmanager.yml 
+  747  cd ..
+  748  ls
+  749  docker ps
+  750  ls
+  751  cd prometheus/
+  752  ls
+  753  cd rules/
+  754  ls
+  755  nano alerts.yml
+  756  ls
+  757  cd  ../..
+  758  ls
+  759  cd alertmanager/
+  760  ls
+  761  nano alertmanager.yml 
+  762  cd ../prometheus/
+  763  ls
+  764  nano prometheus.yml 
+  765  cat prometheus.yml 
+  766  nano prometheus.yml 
+  767  ls
+  768  cd rules/
+  769  ls
+  770  nano alerts.yml 
+  771  cd ..
+  772  cd ../alertmanager/
+  773  ls
+  774  nano alertmanager.yml 
+  775  cd ..
+  776  ls
+  777  docker compose up -d --build
+  778  docker compose down
+  779  docker compose up -d --build
+  780  docker ps
+  781  docker logs prometheus
+  782  cd prometheus/
+  783  ls
+  784  nano prometheus.yml 
+  785  cd ..
+  786  ls
+  787  docker ps
+  788  docker stop cargas_academicas-db
+  789  docker ps
+  790  cd alertmanager/
+  791  ls
+  792  cat alertmanager.yml 
+  793  cd ..
+  794  cd prometheus/
+  795  ls
+  796  cat prometheus.yml 
+  797  cd ../alertmanager/
+  798  cat alertmanager.yml 
+  799  docker logs alertmanager --tail 100
+  800  docker ps
+  801  cd ../prometheus/rules/
+  802  ls
+  803  nano alerts.yml 
+  804  docker start cargas_academicas-db
+  805  docker ps
+  806  cd ../..
+  807  docker ps
+  808  docker run --rm -it progrium/stress --cpu 2 --timeout 300s
+  809  docker pull progrium/stress:latest
+  810  docker run --rm -it alpine sh -c "apk add --no-cache stress-ng && stress-ng --cpu 2 --cpu-load 85 --timeout 6m"
+  811  docker run --rm -it alexeiled/stress-ng --cpu 2 --timeout 60s
+  812  docker run --rm -it alexeiled/stress-ng --cpu 2 --timeout 360s
+  813  docker run --rm -it alexeiled/stress-ng --cpu 2 --timeout 600s
+  814  docker run --rm -it alexeiled/stress-ng --cpu 2 --timeout 360s
+  815  docker run --rm -it alexeiled/stress-ng --vm 1 --vm-bytes 512M --timeout 360s
+  816  docker run --rm -it alexeiled/stress-ng --vm 1 --vm-bytes 4608M --timeout 360s
+  817  docker run --rm -it alexeiled/stress-ng --vm 1 --vm-bytes 4800M --timeout 360s
+  818  docker run --rm -it alexeiled/stress-ng --vm 1 --vm-bytes 4700M --timeout 420s
+  819  docker ps
+  820  docker stop cargas-academicas
+  821  docker start cargas-academicas
+  822  cd alertmanager/
+  823  ls
+  824  nano alertmanager.yml 
+  825  docker ps
+  826  docker stop controlescolar_java-app-1
+  827  docker start controlescolar_java-app-1
+  828  docker stop wordpress-wordpress-1
+  829  docker ps
+  830  docker start wordpress-wordpress-1
+  831  cd ..
+  832  ls prometheus/
+  833  ls
+  834  cd prometheus/rules/
+  835  ls
+  836  nano alerts.yml 
+  837  cd ..
+  838  ls
+  839  nano prometheus.yml 
+  840  cd rules/
+  841  nano alerts.yml 
+  842  docker compose restart prometheus
+  843  docker ps
+  844  docker stop wordpress-wordpress-1
+  845  docker start wordpress-wordpress-1
+  846  cd ../..
+  847  ls
+  848  docker compose down
+  849  docker compose up -d --build
+  850  docker stop wordpress-wordpress-1
+  851  docker ps
+  852  cd prometheus/
+  853  ls
+  854  nano prometheus.yml 
+  855  docker compose restar prometheus
+  856  docker compose restart prometheus
+  857  docker ps
+  858  docker start wordpress-wordpress-1
+  859  docker stop wordpress-wordpress-1
+  860  ls
+  861  cat prometheus.yml 
+  862  cat rules/alerts.yml 
+  863  cd rules/
+  864  nano alerts.yml 
+  865  cd ../..
+  866  docker compose down
+  867  docker compose up -d --build
+  868  docker ps
+  869  docker start wordpress-wordpress-1
+  870  cd prometheus/
+  871  nano prometheus.yml 
+  872  docker ps
+  873  docker compose down
+  874  cd ..
+  875  docker compose up -d --build
+  876  docker ps
+  877  docker stop wordpress-wordpress-1
+  878  docker start wordpress-wordpress-1
+  879  cd ..
+  880  history > historial_reciente.txt

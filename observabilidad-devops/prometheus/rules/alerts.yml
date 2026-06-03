@@ -33,7 +33,7 @@ groups:
 
   - name: container-alerts
     rules:
-      # A4: Contenedor esperado caído (Evaluación global usando cAdvisor)
+      # A4: Contenedor esperado caído
       - alert: ContainerDown
         expr: change_percentage_of_something_if_needed or (time() - last_over_time(container_last_seen{name!=""}[15m]) > 60)
         for: 1m
@@ -43,7 +43,7 @@ groups:
           summary: "Contenedor no disponible (ID: A4)"
           description: "El contenedor '{{ $labels.name }}' ha dejado de reportar señales a cAdvisor durante más de 1 minuto."
 
-      # A10: Opcional - Reinicios frecuentes
+      # A10: Reinicios frecuentes
       - alert: ContainerFrequentRestarts
         expr: rate(container_start_time_seconds{name!=""}[10m]) > 0.005
         for: 5m
@@ -55,7 +55,7 @@ groups:
 
   - name: service-alerts
     rules:
-      # A5: MariaDB caída (Monitoreada a través de mariadb_exporter)
+      # A5: MariaDB caída
       - alert: MariaDBDown
         expr: mysql_up == 0
         for: 1m
@@ -65,7 +65,7 @@ groups:
           summary: "Base de datos MariaDB caída (ID: A5)"
           description: "El exportador 'mariadb_exporter' reporta que la instancia 'cargas_academicas-db' no responde."
 
-      # A6: Django / Cargas Académicas sin responder (Mapeado a seguimiento_programasdeploy-app)
+      # A6: Django / Cargas Académicas sin responder
       - alert: DjangoDown
         expr: up{job="django"} == 0
         for: 1m
@@ -75,7 +75,7 @@ groups:
           summary: "Aplicación Cargas Académicas sin responder (ID: A6)"
           description: "El endpoint de scraping de la aplicación 'cargas-academicas' está caído o inaccesible."
 
-      # A7: Tomcat / Java sin responder (Mapeado a controlescolar_java-app-1 en su puerto de métricas 9404)
+      # A7: Tomcat / Java sin responder
       - alert: TomcatDown
         expr: up{job="tomcat"} == 0
         for: 1m
@@ -85,9 +85,9 @@ groups:
           summary: "Servidor Tomcat / JMX sin responder (ID: A7)"
           description: "El entorno Java de control escolar no responde a las solicitudes de recolección."
 
-      # A8: WordPress sin responder (Usa tu blackbox-exporter apuntando al contenedor apache puerto 80)
+      # A8: WordPress sin responder
       - alert: WordPressDown
-        expr: probe_success{job="wordpress-http"} == 0
+        expr: (probe_success{job="wordpress_http"} == 0) or (up{job="wordpress_http"} == 0)
         for: 1m
         labels:
           severity: critical
@@ -95,7 +95,7 @@ groups:
           summary: "Sitio WordPress caído (ID: A8)"
           description: "Blackbox Exporter reporta que el sitio WordPress ha devuelto un código HTTP inválido (distinto de 2xx)."
 
-      # A9: Opcional - Latencia alta en WordPress (> 1 segundo)
+      # A9: Latencia alta en WordPress (> 1 segundo)
       - alert: HighLatency
         expr: probe_duration_seconds{job="wordpress-http"} > 1
         for: 3m
